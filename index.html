@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Two</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #fff;
+            color: #333;
+        }
+
+        /* Header Styling */
+        header {
+            background-color: #fff;
+            text-align: center;
+            box-sizing: border-box;
+        }
+        header h1 {
+            font-size: calc(24vw - 10%);
+            font-weight: bold;
+            margin: 0;
+            width: 100%;
+        }
+        header h1 span {
+            font-weight: normal;
+        }
+
+        /* Image Placeholder Styling */
+        .image-placeholder {
+            width: 100%;
+            height: 400px;
+            background-color: #ddd;
+            object-fit: cover;
+        }
+
+        /* Text Section */
+        .section {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 50px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .text-block {
+            flex: 1;
+            padding: 20px;
+            font-size: 18px;
+            line-height: 1.6;
+        }
+
+        /* Learn More Button */
+        .learn-more {
+            display: block;
+            text-align: center;
+            margin-top: 20px;
+            font-size: 18px;
+            color: black;
+            text-decoration: none;
+            padding: 10px 20px;
+            border: 2px solid black;
+            transition: 0.3s;
+        }
+        .learn-more:hover {
+            background-color: black;
+            color: white;
+        }
+
+        /* Form Section */
+        .form-section {
+            display: flex;
+            align-items: flex-start;
+            padding: 50px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+            background-color: #fff;
+        }
+
+        .form-section h2 {
+            flex: 0 0 20%;
+            font-size: 36px;
+            margin: 0;
+            padding-top: 0;
+            align-self: flex-start;
+        }
+
+        .form {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .form .input-group {
+            display: flex;
+            width: 100%;
+            margin-bottom: 20px;
+        }
+
+        .form .input-group input, .form .input-group textarea {
+            flex: 1;
+            margin: 10px;
+            font-size: 16px;
+            border: none;
+            border-bottom: 2px solid #000;
+            padding: 10px;
+            outline: none;
+        }
+
+        .form .input-group input::placeholder,
+        .form .input-group textarea::placeholder {
+            color: #000;
+        }
+
+        .form textarea {
+            min-height: 100px;
+        }
+
+        .form button {
+            padding: 15px 30px;
+            background-color: black;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            align-self: flex-start;
+            margin: 10px;
+        }
+
+        /* Footer Section */
+        footer {
+            background-color: #fff;
+            padding: 20px;
+            text-align: center;
+            font-size: 14px;
+        }
+
+        /* New Styles for Text and Image Row */
+        .text-image-row {
+            display: flex;
+            align-items: flex-end;
+        }
+        .text-image-row .text-block {
+            flex: 0 0 25%;
+            align-self: flex-end;
+        }
+        .text-image-row .image-placeholder {
+            flex: 0 0 75%;
+        }
+
+        /* About Us Section */
+        .about-us-row {
+            display: flex;
+            align-items: flex-start;
+            padding: 50px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .about-us-row h2 {
+            flex: 0 0 20%;
+            font-size: 36px;
+            margin: 0;
+            padding-top: 0;
+            align-self: flex-start;
+        }
+
+        .about-us-row .text-block {
+            flex: 0 0 55%;
+        }
+
+        .about-us-row .image-placeholder {
+            flex: 0 0 25%;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <h1>form <span>two</span></h1>
+    </header>
+
+    <!-- Image and Text Section -->
+    <div class="section text-image-row">
+        <div class="text-block">
+            <p>We produce high-end, unique architecture, and bring it to the ready-to-purchase housing market, breaking away from the standard, corner-cutting approach in real estate development, focusing on quality and integrity in every project.</p>
+        </div>
+        <img src="image1.png" alt="Kitchen Image" class="image-placeholder">
+    </div>
+
+    <!-- About Us Section -->
+    <div class="section about-us-row">
+        <h2>About Us</h2>
+        <div class="text-block">
+            <p>At Form Two, we are driven by a vision to bridge the gap between exceptional architectural design and high-end home development. As two architects with extensive experience in some of the world’s most renowned architecture firms, we have witnessed firsthand the disconnect that often exists between architects and developers...</p>
+            <p>Conversely, homes produced by developers frequently lack the depth and soul of thoughtful design, as cost-cutting measures can undermine architectural integrity...</p>
+            <a href="#" class="learn-more">LEARN MORE</a>
+        </div>
+        <img src="image3.png" alt="Living Room Image" class="image-placeholder">
+    </div>
+
+    <!-- Form Section -->
+    <div class="form-section">
+        <h2>About You</h2>
+        <div class="form">
+            <div class="input-group">
+                <input type="text" name="name" placeholder="NAME">
+                <input type="email" name="email" placeholder="EMAIL">
+            </div>
+            <div class="input-group">
+                <textarea name="message" placeholder="MESSAGE"></textarea>
+            </div>
+            <button type="submit">Send</button>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        &copy; Form Two 2024
+    </footer>
+
+</body>
+</html>
