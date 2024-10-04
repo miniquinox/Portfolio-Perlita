@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Form Two</title>
+    <style>
+        .menu {
+            display: flex;
+            justify-content: center;
+            background-color: #fff;
+            padding: 10px 0;
+            border-bottom: 1px solid #ddd;
+        }
+        .menu a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #333;
+            font-size: 18px;
+            position: relative;
+            transition: color 0.3s;
+        }
+        .menu a::after {
+            content: '';
+            display: block;
+            width: 0;
+            height: 2px;
+            background: #333;
+            transition: width 0.3s;
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+        }
+        .menu a:hover {
+            color: #000;
+        }
+        .menu a:hover::after {
+            width: 100%;
+        }
+
+        /* Highlight for current page */
+        .menu a.active {
+            font-weight: bold;
+            color: #000;
+        }
+        .menu a.active::after {
+            width: 100%;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #fff;
+            color: #333;
+        }
+
+        /* Layout */
+        .about-container {
+            display: flex;
+            flex-direction: row;
+            padding: 50px;
+            box-sizing: border-box;
+        }
+
+        .about-text {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+        }
+
+        .about-section {
+            display: flex;
+            align-items: flex-start;
+        }
+
+        .about-section h3 {
+            flex: 0 0 200px;
+            margin: 0;
+            font-size: 20px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-weight: bold;
+        }
+
+        .about-section p {
+            flex: 1;
+            line-height: 1.6;
+            margin: 0;
+        }
+
+        .about-image {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .about-image img {
+            width: 100%;
+            max-width: 500px;
+            height: auto;
+        }
+
+        /* Contact Section */
+                .contact-section {
+            padding: 50px;
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* Center the entire section horizontally */
+        }
+        
+                .contact-section h2 {
+            margin-bottom: 20px;
+            font-size: 24px;
+            margin-left: -680px; /* Add negative left margin */
+        }
+        
+        .contact-section form {
+            width: 50%;
+            margin: 0 auto;
+        }
+        
+        .contact-section form input,
+        .contact-section form textarea {
+            width: 100%;
+            padding: 15px;
+            margin-bottom: 15px;
+            border: 1px solid #000;
+            font-size: 16px;
+            box-sizing: border-box;
+        }
+        
+        .contact-section form button {
+            padding: 15px 30px;
+            background-color: black;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        /* Footer */
+        footer {
+            padding: 20px;
+            text-align: center;
+            font-size: 14px;
+            background-color: #fff;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <nav class="menu">
+            <a href="index.html">Home Page</a>
+            <a href="#about">Our Work</a>
+            <a href="aboutUs.html" class="active">About Us</a> <!-- Active for About Us -->
+        </nav>
+    </header>
+
+    <!-- About Section -->
+    <div class="about-container">
+        <!-- Text Section -->
+        <div class="about-text">
+            <div class="about-section">
+            <h3 style="text-align: right; padding-right: 30px; padding-top: 2px;">CARMEN<br>CARRETERO<br>MARTINEZ</h3>
+            <p style="font-size: 18px; text-align: justify;">Carmen earned a Bachelor of Arts in Architecture from the University of New Mexico and a Master of Architecture from UC Berkeley. She worked on the public client side of development with organizations such as Albuquerque Public Schools and the San Francisco Bureau of Architecture. Carmen also gained experience on the design side, working for large firms like SmithGroup and Skidmore, Owings & Merrill, where she took on high-end, large-scale projects in the commercial, residential, and hospitality sectors, mainly in markets abroad.</p>
+            </div>
+            <div class="about-section">
+            <h3 style="text-align: right; padding-right: 30px; padding-top: 3px;">PATRICK<br>THOMAS<br>WARD</h3>
+            <p style="font-size: 18px; text-align: justify;">Patrick received an accredited Bachelor’s in Architecture from Ball State University. He worked for Perkins & Will (Chicago) on projects such as xxx. Patrick moved to San Francisco where he joined Skidmore, Owens & Merril, taking on larger projects focusing on high-end hospitality and commercial, leading the design of the newest addition to San Francisco high line, a mixed-use tower in Financial District. After relocating to New York, their extensive experience across different facets of the profession led Carmen and Patrick to co-found <strong>Form Two</strong>.</p>
+            </div>
+        </div>
+
+        <!-- Image Section -->
+        <div class="about-image">
+            <img src="image2.png" alt="Carmen and Patrick">
+        </div>
+    </div>
+
+    <!-- Contact Section -->
+    <div class="contact-section">
+        <h2>Contact Us</h2>
+        <form action="#">
+            <input type="text" name="name" placeholder="NAME" required>
+            <input type="email" name="email" placeholder="EMAIL" required>
+            <textarea name="message" placeholder="MESSAGE" rows="5" required></textarea>
+            <button type="submit">SEND</button>
+        </form>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        &copy; Form Two 2024
+    </footer>
+
+</body>
+</html>

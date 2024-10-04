@@ -5,6 +5,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Form Two</title>
     <style>
+                .menu {
+            display: flex;
+            justify-content: center;
+            background-color: #fff;
+            padding: 10px 0;
+            border-bottom: 1px solid #ddd;
+        }
+        .menu a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #333;
+            font-size: 18px;
+            position: relative;
+            transition: color 0.3s;
+        }
+        .menu a::after {
+            content: '';
+            display: block;
+            width: 0;
+            height: 2px;
+            background: #333;
+            transition: width 0.3s;
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+        }
+        .menu a:hover {
+            color: #000;
+        }
+        .menu a:hover::after {
+            width: 100%;
+        }
         body {
             font-family: Arial, sans-serif;
             margin: 0;
@@ -29,12 +61,13 @@
             font-weight: normal;
         }
 
-        /* Image Placeholder Styling */
+                /* Image Placeholder Styling */
         .image-placeholder {
             width: 100%;
             height: 400px;
             background-color: #ddd;
             object-fit: cover;
+            margin-top: 50px;
         }
 
         /* Text Section */
@@ -182,23 +215,29 @@
 
     <!-- Header -->
     <header>
+        <nav class="menu">
+            <a href="#home">Home Page</a>
+            <a href="#about">Our Work</a>
+            <a href="aboutUs.html">About Us</a> <!-- Link to About Us page -->
+        </nav>
         <h1>form <span>two</span></h1>
     </header>
 
     <!-- Image and Text Section -->
     <div class="section text-image-row">
         <div class="text-block">
-            <p>We produce high-end, unique architecture, and bring it to the ready-to-purchase housing market, breaking away from the standard, corner-cutting approach in real estate development, focusing on quality and integrity in every project.</p>
+            <p style="font-size: 18px; text-align: justify;">We produce high-end, unique architecture, and bring it to the ready-to-purchase housing market,  breaking away from the standard, corner-cutting approach in real estate development, focusing on quality and integrity in every project.</p>
         </div>
         <img src="image1.png" alt="Kitchen Image" class="image-placeholder">
     </div>
 
     <!-- About Us Section -->
-    <div class="section about-us-row">
-        <h2>About Us</h2>
+    <div class="section about-us-row" style="padding-top: 20px;">
+        <h2 style="padding-top: 30px;">About Us</h2>
         <div class="text-block">
-            <p>At Form Two, we are driven by a vision to bridge the gap between exceptional architectural design and high-end home development. As two architects with extensive experience in some of the world’s most renowned architecture firms, we have witnessed firsthand the disconnect that often exists between architects and developers...</p>
-            <p>Conversely, homes produced by developers frequently lack the depth and soul of thoughtful design, as cost-cutting measures can undermine architectural integrity...</p>
+            <p style="font-size: 18px; text-align: justify;"> At Form Two, we are driven by a vision to bridge the gap between exceptional architectural design and high-end home development. As two architects with extensive experience in some of the world’s most renowned architecture firms, we have witnessed firsthand the disconnect that often exists between architects and developers. Award-winning, high-end architecture is typically a bespoke process, crafted for individual clients through a one-on-one collaboration with an architectural firm. This approach, while remarkable, often results in designs that are exclusive and inaccessible to the broader market.</p>
+            <p>Conversely, homes produced by developers frequently lack the depth and soul of thoughtful design, as cost-cutting measures can undermine architectural integrity. This results in properties that may be functional but fail to capture the essence of timeless designs and aesthetic excellence.</p>
+            <p style="font-size: 18px; text-align: justify;"> Form Two seeks to merge these two worlds. By combining our expertise in high-end architecture with a streamlined development process, we create unique, sophisticated homes that are not only beautifully designed but also available to a “ready to buy” market. Our goal is to offer residences that embody the highest standards of architectural innovation and elegance, making exceptional design accessible to those who truly value premium design.</p>
             <a href="#" class="learn-more">LEARN MORE</a>
         </div>
         <img src="image3.png" alt="Living Room Image" class="image-placeholder">
